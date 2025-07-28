@@ -20,3 +20,19 @@ Machine learning project to predict house prices using the Ames Housing Dataset.
 - Model: Random Forest (RMSE: $29,194.74, R2: 0.89).
 - Key features: OverallQual (0.59), GrLivArea (0.18), TotalBsmtSF (0.09).
 - Example: Predicted $214,830.41 for OverallQual=7, GrLivArea=2000, TotalBsmtSF=1000, GarageArea=500, LotArea=10000, Neighborhood=CollgCr, BldgType=1Fam, HouseStyle=2Story, MSZoning=RL.
+
+## Deployment
+- Trained Random Forest (RMSE: $29,194.74, R2: 0.89).
+- Streamlit app with inputs for LotArea, GrLivArea, TotalBsmtSF, GarageArea, OverallQual, Neighborhood, BldgType, HouseStyle, MSZoning.
+- Tested locally: Predicted $214,830.41 for OverallQual=7, GrLivArea=2000, TotalBsmtSF=1000, GarageArea=500, LotArea=10000, Neighborhood=CollgCr, BldgType=1Fam, HouseStyle=2Story, MSZoning=RL.
+- Deployed to Streamlit Cloud: https://housepriceprediction1318.streamlit.app
+
+## Correlation Matrix 
+# Top 5 Correlations with SalePrice:
+- SalePrice      1.000000
+- OverallQual    0.790982
+- GrLivArea      0.708624
+- GarageCars     0.640409
+- GarageArea     0.623431
+- TotalBsmtSF    0.613581
+- Name: SalePrice, dtype: float64
