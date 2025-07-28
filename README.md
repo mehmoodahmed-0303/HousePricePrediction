@@ -11,28 +11,56 @@ Machine learning project to predict house prices using the Ames Housing Dataset.
 - `requirements.txt`: Dependencies.
 - `train.csv`: Dataset.
 
-## How to Run
-1. Install: `pip install -r requirements.txt`
-2. Run locally: `streamlit run app.py`
-3. Access deployed app: https://housepriceprediction1318.streamlit.app
+## Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/mehmoodahmed-0303/HousePricePrediction.git
+```
 
-## Results
-- Model: Random Forest (RMSE: $29,194.74, R2: 0.89).
-- Key features: OverallQual (0.59), GrLivArea (0.18), TotalBsmtSF (0.09).
-- Example: Predicted $214,830.41 for OverallQual=7, GrLivArea=2000, TotalBsmtSF=1000, GarageArea=500, LotArea=10000, Neighborhood=CollgCr, BldgType=1Fam, HouseStyle=2Story, MSZoning=RL.
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-## Deployment
-- Trained Random Forest (RMSE: $29,194.74, R2: 0.89).
-- Streamlit app with inputs for LotArea, GrLivArea, TotalBsmtSF, GarageArea, OverallQual, Neighborhood, BldgType, HouseStyle, MSZoning.
-- Tested locally: Predicted $214,830.41 for OverallQual=7, GrLivArea=2000, TotalBsmtSF=1000, GarageArea=500, LotArea=10000, Neighborhood=CollgCr, BldgType=1Fam, HouseStyle=2Story, MSZoning=RL.
-- Deployed to Streamlit Cloud: https://housepriceprediction1318.streamlit.app
+3. Run locally:
+```bash
+streamlit run app.py
+```
+4. Access deployed app: https://housepriceprediction1318.streamlit.app
 
-## Correlation Matrix 
-# Top 5 Correlations with SalePrice:
-- SalePrice      1.000000
-- OverallQual    0.790982
-- GrLivArea      0.708624
-- GarageCars     0.640409
-- GarageArea     0.623431
-- TotalBsmtSF    0.613581
-- Name: SalePrice, dtype: float64
+# Results
+## Dataset:
+- 1460 rows, 81 columns; SalePrice as target (mean: $180,921, max: $755,000).
+## Model:
+- Random Forest (RMSE: $29,194.74, R2: 0.89).
+
+## Key Features:
+- Numerical: OverallQual, GrLivArea, TotalBsmtSF, GarageArea, LotArea.
+- Categorical: Neighborhood, BldgType, HouseStyle, MSZoning.
+
+## Feature Importance:
+- OverallQual: 0.588257
+- GrLivArea: 0.178465
+- TotalBsmtSF: 0.091544
+
+## EDA:
+- ## Top 5 correlations with SalePrice:
+- - SalePrice: 1.000000
+- - OverallQual: 0.790982
+- - GrLivArea: 0.708624
+- - GarageCars: 0.640409
+- - GarageArea: 0.623431
+
+## Example Prediction:
+- $214,830.41 for OverallQual=7, GrLivArea=2000, TotalBsmtSF=1000, GarageArea=500, LotArea=10000, Neighborhood=CollgCr, BldgType=1Fam, HouseStyle=2Story, MSZoning=RL.
+
+# Deployment
+- Streamlit app deployed at https://housepriceprediction1318.streamlit.app.
+- Inputs: LotArea, GrLivArea, TotalBsmtSF, GarageArea, OverallQual, Neighborhood, BldgType, HouseStyle, MSZoning.
+- Tested locally: Predicted $214,830.41 (see above inputs).
+- Deployed app prediction: [Pending confirmation].
+
+
+# Portfolio
+- Added to GitHub profile: mehmoodahmed-0303.
+- Status: [Pending confirmation].
